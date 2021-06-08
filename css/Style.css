@@ -1,3 +1,5 @@
+/*CSS desordenado. proximamente ordenado*/
+
 #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -12,7 +14,8 @@
 
 .position {
     position: absolute;
-    padding-left: 73rem;
+    padding-left: 75rem;
+    display: flex;
 }
 
 .bordes {

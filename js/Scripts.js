@@ -97,7 +97,7 @@ const datoProductos = [
     }
 ]
 
-/function agregarCarrito () {
+function agregarCarrito () {
     datoProductos.forEach(element => {
         let contenedorNom = document.createElement("div")
         contenedorNom.innerHTML = element.nombre
@@ -111,7 +111,7 @@ const datoProductos = [
 agregarCarrito()
  
 
-/* const apretarBotonA = document.querySelector(".carrito1");
+const apretarBotonA = document.querySelector(".carrito1");
 
 const agregado = []
 
@@ -122,7 +122,7 @@ const apretaste1 = () => {
 
 }
 
-apretarBotonA.addEventListener("click", apretaste1) */
+apretarBotonA.addEventListener("click", apretaste1) 
 /* 
 
 const apretarBotonB = document.querySelector(".carrito2");

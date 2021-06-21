@@ -7,17 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Indie+Flower&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="./css/Style.css">
+
     <!-- BS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <title>Proyecto final</title>
 
 </head>
@@ -26,17 +35,17 @@
 
     <!-- Navegacion -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <a class="navbar-brand" href="#page-top">
             <img class="navbar-logo position-logo" src="./assets/Img/LOGO REWE.jpg" alt="" height="400px" width="200px">
         </a>
         <div class="centrar-links">
             <p class="parrafo-nav">Tu mejor eleccion!</p>
             <ul class="navbar-nav text-uppercase ml-auto zero">
-                <li class="nav-item zero"><a class="nav-link js-scroll-trigger" href="#Destacados">Destacados</a></li>
-                <li class="nav-item zero"><a class="nav-link js-scroll-trigger" href="#Ofertas">Nuestas Ofertas</a></li>
-                <li class="nav-item zero"><a class="nav-link js-scroll-trigger" href="#Mas-Especifico">Productos
-                        Especificos</a></li>
-                <li class="nav-item zero"><a class="nav-link js-scroll-trigger" href="#Ubicacion">Encontranos</a></li>
+                <li class="nav-item zero"><a class="nav-link" href="#Destacados">Destacados</a></li>
+                <li class="nav-item zero"><a class="nav-link" href="#Ofertas">Nuestas Ofertas</a></li>
+                <li class="nav-item zero"><a class="nav-link" href="#Mas-Especifico">Productos Especificos</a></li>
+                <li class="nav-item zero"><a class="nav-link" href="#Ubicacion">Encontranos</a></li>
+                <li class="nav-item zero"><a class="nav-link" href="!#"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </div>
         <form class="position" action="">
@@ -45,17 +54,15 @@
                 <div class="fas fa-search"></div>
             </button>
         </form>
-        <!-- <div class="position">
-            <input type="text" placeholder="Buscar">
-        </div> -->
     </nav>
 
     <!-- Carrousel -->
-    <section class="page-section page-section-carrousel">
-        <div class="carrousel">
+    <section class="page-section page-section-carrousel bg-light">
+        <div class="carousel-slider">
             <div class="row">
                 <div class="col-sm-12">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <!-- Carrousel Img -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="./assets/Img/carrousel/1.jpg" class="d-block w-100" alt="Productos"
@@ -73,16 +80,15 @@
                             </div>
 
                         </div>
+                        <!-- Carrousel Controls -->
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
                             data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
+                            <i class="fas fa-chevron-left" height:50px></i>
                         </a>
 
                         <a class="carousel-control-next" href="#carouselExampleControls" role="button"
                             data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
+                            <i class="fas fa-chevron-right"></i>
                         </a>
                     </div>
                 </div>
@@ -91,240 +97,149 @@
     </section>
 
     <!-- Productos Destacados -->
-    <section class="page-section page-section-destacados bg-light" id="Destacados">
+    <section class="page-section page-section-destacados" id="Destacados">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase"> Productos Destacados </h2>
-                <div id="agregarCarrito" class="row-especial responsive">
-                    <!-- Item 1 -->
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <div class="responsive-img">
-                                <img class="responsive-img" src="./assets/Img/productos-destacados/1.jpg" alt="" />
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading">Despensero Micro Muro</div>
-                                </div>
-                            </div>
-                            <button class="btn btn-primary carrito1" type="button">
-                                <i class="fas fa-smile-beam"></i>
-                                Agregar al carrito
-                            </button>
-                            <div class="position-arrow circle">
-                                <svg class="hidden" focusable="false" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
-                                </svg>
-                            </div>
+            </div>
+            <div class="swiper"> 
+                <div class="swiperDestacados__contenedor">
+                    <!-- Control prev -->
+                    <button aria-label="anterior" class="swiperDestacados__anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="swiperDestacados__lista">
+                        <!-- Slide 1 -->
+                        <div class="swiperDestacados__elemento spaceDestacados">
+                            <img src="./assets/Img/productos-destacados/1.jpg" alt=""/>
+                            <p>Despensero Micro Muro</p>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiperDestacados__elemento spaceDestacados">
+                            <img src="./assets/Img/productos-destacados/2.jpg" alt=""/>
+                            <p>BAHIUT Muro Vertical</p>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiperDestacados__elemento spaceDestacados">
+                            <img src="./assets/Img/productos-destacados/3.jpg" alt=""/>
+                            <p>Hindu Muro</p>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="swiperDestacados__elemento spaceDestacados">
+                            <img src="./assets/Img/productos-destacados/4.jpg" alt=""/>
+                            <p>Rrack Muro Vertical</p>
+                        </div>
+
+                        <!-- Slide 5 -->
+                        <div class="swiperDestacados__elemento spaceDestacados">
+                            <img src="./assets/Img/productos-destacados/5.jpg" alt=""/>
+                            <p>Casita Muro</p>
+                        </div>
+
+                        <!-- Slide 6 -->
+                        <div class="swiperDestacados__elemento spaceDestacados">
+                            <img src="./assets/Img/productos-destacados/6.jpg" alt=""/>
+                            <p>Hordenador de Tela Muro</p>
+                        </div>
+
+                        <!-- Slide 7 -->
+                        <div class="swiperDestacados__elemento spaceDestacados">
+                            <img src="./assets/Img/productos-destacados/6.jpg" alt=""/>
+                            <p>7</p>
+                        </div>
+                        <!-- Slide 8 -->
+                        <div class="swiperDestacados__elemento spaceDestacados">
+                            <img src="./assets/Img/productos-destacados/6.jpg" alt=""/>
+                            <p>8</p>
                         </div>
                     </div>
-                    <!-- Item 2 -->
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <div class="responsive-img-b">
-                                <img class="responsive-img-b" src="./assets/Img/productos-destacados/2.jpg" alt="" />
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading">BAHIUT Muro Vertical</div>
-                                </div>
-                            </div>
-                            <button class="btn btn-primary carrito2" type="button">
-                                <i class="fas fa-smile-beam"></i>
-                                Agregar al carrito
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <div class="responsive-img">
-                                <img class="responsive-img" src="./assets/Img/productos-destacados/3.jpg" alt="" />
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading">Hindu Muro</div>
-                                </div>
-                            </div>
-                            <div class="alinear">
-                                <button class="btn btn-primary carrito3" type="button">
-                                    <i class="fas fa-smile-beam"></i>
-                                    Agregar al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 4 -->
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <div class="portfolio-item">
-                            <div class="responsive-img-b">
-                                <img class="responsive-img-b" src="./assets/Img/productos-destacados/4.jpg" alt="" />
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading">Rrack Muro Vertical</div>
-                                </div>
-                            </div>
-                            <div class="alinear">
-                                <button class="btn btn-primary carrito4" type="button">
-                                    <i class="fas fa-smile-beam"></i>
-                                    Agregar al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 5 -->
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <div class="portfolio-item">
-                            <div class="responsive-img">
-                                <img class="responsive-img" src="./assets/Img/productos-destacados/5.jpg" alt="" />
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading">Casita Muro</div>
-                                </div>
-                            </div>
-                            <div class="alinear">
-                                <button class="btn btn-primary carrito5" type="button">
-                                    <i class="fas fa-smile-beam"></i>
-                                    Agregar al carrito
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 6 -->
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="portfolio-item">
-                            <div class="responsive-img-b">
-                                <img class="responsive-img-b" src="./assets/Img/productos-destacados/6.jpg" alt="" />
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading">Hordenador de Tela Muro</div>
-                                </div>
-                                <button class="btn btn-primary carrito6" type="button">
-                                    <i class="fas fa-smile-beam"></i>
-                                    Agregar al carrito
-                                </button>
-                            </div>
-                            <div class="position-arrow2 circle responsive">
-                                <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Control next -->
+                    <button aria-label="siguiente" class="swiperDestacados__siguiente">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
+
+                <div role="tablist" class="swiperDestacados__indicador"></div>
             </div>
         </div>
     </section>
 
     <!-- Ofertas -->
-    <section class="page-section" id="Ofertas">
+    <section class="page-section bg-light" id="Ofertas">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase"> Ofertas </h2>
-                <div class="row-especial responsive">
-                    <!-- Item 1 -->
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <div class="responsive-img">
-                                <img class="responsive-img" src="./assets/Img/ofertas/1.jpg" alt="" />
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading">Alacenas y Bajo Mesadas</div>
-                                </div>
+                <div class="swiper"> 
+                    <div class="swiperOfertas__contenedor">
+                        <button aria-label="anterior" class="swiperOfertas__anterior">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="swiperOfertas__lista">
+                            <!-- Slide 1 -->
+                            <div class="swiperOfertas__elemento ">
+                                <img src="./assets/Img/ofertas/1.jpg" alt=""/>
+                                <p>Taburete recto</p>
                             </div>
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-smile-beam"></i>
-                                Ver oferta
-                            </button>
-                            <div class="position-arrow circle">
-                                <svg class="hidden" focusable="false" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
-                                </svg>
+    
+                            <!-- Slide 2 -->
+                            <div class="swiperOfertas__elemento spaceOfertas">
+                                <img src="./assets/Img/ofertas/2.jpg" alt=""/>
+                                <p>Repisas flotantes</p>
                             </div>
-                        </div>
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <div class="responsive-img-b">
-                                <img class="responsive-img-b" src="./assets/Img/ofertas/2.jpg" alt="" />
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading">Camastros</div>
-                                </div>
+    
+                            <!-- Slide 3 -->
+                            <div class="swiperOfertas__elemento spaceOfertas">
+                                <img src="./assets/Img/ofertas/3.jpg" alt=""/>
+                                <p>Torre deck</p>
                             </div>
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-smile-beam"></i>
-                                Ver oferta
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <div class="portfolio-item">
-                            <div class="responsive-img">
-                                <img class="responsive-img" src="./assets/Img/ofertas/3.jpg" alt="" />
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading">Productos Seleccionados</div>
-                                </div>
+    
+                            <!-- Slide 4 -->
+                            <div class="swiperOfertas__elemento spaceOfertas">
+                                <img src="./assets/Img/ofertas/4.jpg" alt=""/>
+                                <p>Banco escalera</p>
                             </div>
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-smile-beam"></i>
-                                Ver oferta
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Item 4 -->
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <div class="portfolio-item">
-                            <div class="responsive-img-b">
-                                <img class="responsive-img-b" src="./assets/Img/productos-destacados/4.jpg" alt="" />
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading">Texto</div>
-                                </div>
+    
+                            <!-- Slide 5 -->
+                            <div class="swiperOfertas__elemento spaceOfertas">
+                                <img src="./assets/Img/ofertas/5.jpg" alt=""/>
+                                <p>Isla con taburetes</p>
                             </div>
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-smile-beam"></i>
-                                Ver oferta
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Item 5 -->
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <div class="portfolio-item">
-                            <div class="responsive-img">
-                                <img class="responsive-img" src="./assets/Img/productos-destacados/5.jpg" alt="" />
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading">Texto</div>
-                                </div>
+    
+                            <!-- Slide 6 -->
+                            <div class="swiperOfertas__elemento spaceOfertas">
+                                <img src="./assets/Img/ofertas/6.jpg" alt=""/>
+                                <p>Perchero nordico</p>
                             </div>
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-smile-beam"></i>
-                                Ver oferta
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Item 6 -->
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="portfolio-item">
-                            <div class="responsive-img-b">
-                                <img class="responsive-img-b" src="./assets/Img/productos-destacados/6.jpg" alt="" />
-                                <div class="portfolio-caption">
-                                    <div class="portfolio-caption-heading">Texto</div>
-                                </div>
+    
+                            <!-- Slide 7 -->
+                            <div class="swiperOfertas__elemento spaceOfertas">
+                                <img src="./assets/Img/ofertas/7.jpg" alt=""/>
+                                <p>Porta macetas</p>
                             </div>
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-smile-beam"></i>
-                                Ver oferta
-                            </button>
-                            <div class="position-arrow2 circle responsive">
-                                <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-                                </svg>
+                            <!-- Slide 8 -->
+                            <div class="swiperOfertas__elemento spaceOfertas">
+                                <img src="./assets/Img/ofertas/8.jpg" alt=""/>
+                                <p>Repisa flotante</p>
                             </div>
                         </div>
+                        <button aria-label="siguiente" class="swiperOfertas__siguiente">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
+                    <div role="tablist" class="swiperOfertas__indicador"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Mas especifico -->
-    <section class="page-section bg-light" id="Mas-Especifico">
+    <section class="page-section" id="Mas-Especifico">
         <div class="container">
-            <div class="center">
-                <button type="button" class="btn btn-outline-danger padding doce">Ahora 12</button>
+            <div class="center-buttons">
+                <button type="button" class="btn btn-outline-danger margin doce">Ahora 12</button>
                 <button type="button" class="btn btn-outline-warning dieciocho">Ahora 18</button>
             </div>
         </div>
@@ -347,6 +262,18 @@
         </div>
     </section>
 
+    <!-- Encontranos -->
+    <section class="page-section" id="Ubicacion">
+        <div class="container container-responsive">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase text-muted-2 change-color texto-resposive">Te estamos esperando!</h2>
+            </div>
+            <div class="maps-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d836.8799257425842!2d-60.70304933085738!3d-32.963687936222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAv.%20Pte.%20Per%C3%B3n%205966%2C%20Rosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1624135289555!5m2!1ses!2sar" width="1000px" height="800px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="page-section footer py-4">
         <div class="row-footer align-items-center">
@@ -355,8 +282,8 @@
                 los derechos reservados.</div>
             <div class="col-lg-4 my-3 my-lg-0 padding-left2">
                 <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/muebleriarewe"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/muebleriarewe/"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="col-lg-4 text-lg-right">
                 <ul class="list">
@@ -372,13 +299,13 @@
     </footer>
 
     <a class="scroll-to-top rounded" href="#page-top" style="opacity: 1; display: block;">
-        <i class="fab fa-whatsapp"></i>
-        <!-- <svg class="svg-inline--fa fa-angle-up fa-w-10" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
-        <path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"></path> -->
-        </svg>
-        <!-- <i class="fas fa-angle-up"></i> Font Awesome fontawesome.com -->
+        <i class="size fab fa-whatsapp"></i>
     </a>
-
+    
+    <!-- Scripts Slider -->
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+    
+    <!-- Script -->
     <script src="./js/Scripts.js"></script>
 
     <!-- BS -->

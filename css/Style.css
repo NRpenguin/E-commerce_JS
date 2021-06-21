@@ -1,25 +1,64 @@
 /*CSS desordenado. proximamente ordenado*/
 
+
 #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 16px;
+    padding-bottom: 5px;
     border: none;
-    background-color: rgb(255, 0, 0);
-    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out
+    background-color: rgb(255, 0, 0);  
 }
 
 #mainNav .navbar-brand img {
-    height: 1.5rem
+    height: 4.5rem;
+    width: 13rem;
+}
+
+nav{
+    padding-bottom: 5px;
+    padding-top: 16px;
+}
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    padding-left: 37px;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.scroll-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    background: rgba(52, 58, 64, 0.5);
+    line-height: 45px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255 255 255);
 }
 
 .position {
     position: absolute;
-    padding-left: 75rem;
+    left: 75rem;
     display: flex;
 }
 
 .bordes {
     border-radius: 0.25rem;
+}
+
+.acostado{
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .parrafo-nav {
@@ -28,7 +67,8 @@
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 20px;
+    font-size: 41px;
+    font-family: 'Dancing Script', cursive;
 }
  
 .zero{
@@ -37,7 +77,7 @@
 }
 
 .centrar-links {
-    margin-left:227px;
+    margin-left: 11rem;
 }
 
 .container-1 {
@@ -47,14 +87,19 @@
 }
 
 .page-section {
-    padding: 6rem 0
+    padding: 4rem 0
 }
 
-.carrousel{
-    margin-right:auto;
-    margin-left:auto;
-    margin-top: 50px;
-    width:78rem;
+.carousel-slider{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 82px;
+    width: 78rem;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    color: #000000 !important;
 }
 
 .distanciado{
@@ -71,49 +116,12 @@
     text-align: center
 }
 
-
-
-.position-arrow {
-    position: absolute;
-    right: 250px;
-    bottom: 85px;
-    width: 100px;
-    height: 100px
-}
-
-.position-arrow2 {
-    position: absolute;
-    left: 250px;
-    bottom: 100px;
-    width: 100px;
-    height: 100px
-}
-
-.circle {
-    text-align: center;
-    background: rgba(52, 58, 64, .5);
-    line-height: 50px;
-    z-index: 999;
-    border-radius: 50rem
-}
-
-/* .border-cuotas{
-    display: inline-block;
-    background-color: aqua;
-    border: 5px solid black ;
-}
-
-.centrar {
-    margin-left: auto;
-    margin-right: auto;
-} */
-
-.center {
+.center-buttons {
     position: absolute;
     padding-left: 227px;
 }
 
-.padding {
+.margin {
     margin-right: 420px;
 }
 
@@ -144,17 +152,17 @@ figure {
     justify-content: center;
     list-style-type: none;
     margin: 0;
-    padding-left: 184px;
+    padding-left: 246px;
 }
 
 .padding-left1 {
-    margin-left: 130px;
+    margin-left: 78px;
     margin-right: 0;
 }
 
 .padding-left2 {
-    margin-left: 28px;
-    margin-right: -309px;
+    margin-left: 120px;
+    margin-right: -302px;
 }
 .row-footer {
     display: flex;
@@ -163,19 +171,10 @@ figure {
 }
 
 h2{
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     font-style: italic;
     font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
-/* .row {
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: 104px;
-} */
-
 
 svg:not(:root).svg-inline--fa {
     overflow: visible;
@@ -193,22 +192,14 @@ svg:not(:root).svg-inline--fa {
     vertical-align: -.125em;
 }
 
+.size{
+    height: 1rem;
+}
+
 svg {
     vertical-align: middle;
 }
 
-.scroll-to-top {
-    position: fixed;
-    right: 15px;
-    bottom: 15px;
-    display: none;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    color: #fff;
-    background: rgba(52, 58, 64, 0.5);
-    line-height: 45px;
-}
 
 element.style {
     opacity: 1;
@@ -219,186 +210,238 @@ element.style {
     border-radius: 0.25rem !important;
 }
 
-/*Responsive*/
-
-
-@media (max-width: 1792px) {
-    .responsive {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -0.75rem;
-        margin-left: -0.75rem;
-        justify-content: center
-    }
-    .position-arrow {
-        position: absolute;
-        right: 270px;
-        top: 264px;
-        width: 100px;
-        height: 100px
-    }
-    .position-arrow2 {
-        position: absolute;
-        left: 280px;
-        bottom: 275px;
-        width: 100px;
-        height: 100px
-    }
+.maps-center{
+    width: 993px;
+    padding-left: 65px;
 }
 
-@media (max-width: 1560px){
-    .page-section{
-        width: 1664px;
+#Ubicacion {
+    background-color: #900202;
+}
+
+.change-color{
+    color: #ffffff;
+}
+
+/*Responsive*/
+@media(min-width:1024px) and (max-width:1440px){
+    /* Nav */
+    .centrar-links {
+        margin-left: 3rem;
     }
-    .distanciado{
-        margin-left: 26px;
+
+    .position {
+        position: absolute;
+        left: 65rem;
+        display: flex;
+    }
+
+    .page-section{
+        width: 1582px;
+    }
+
+    /* Carousel */
+    .carousel-slider {
+        margin-right: auto;
+        margin-left: 14px;
+        margin-top: 82px;
+        width: 78rem;
+    }
+
+    /* Destacados y Ofertas */
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-left: 11rem !important;
+    }
+
+    /* Especificos */
+    .center-buttons {
+        position: absolute;
+        padding-left: 181px;
+    }
+
+    .distanciado {
+        margin-left: -5px !important;
         margin-top: 100px;
         width: 78rem;
     }
+
+    /* Encontranos */
+    .maps-center {
+        width: 993px;
+        padding-left: 56px;
+    }
+
+    /* Footer */
+    .list {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 91px;
+        position: absolute;
+        bottom: -14px;
+        left: 44px;
+    }
 }
 
-@media (min-width: 1000px) and (max-width: 1200px){
-    .position-arrow {
+@media(min-width:768px) and (max-width:1024px){
+    /* Carousel */
+    .carousel-slider {
+        margin-right: auto;
+        margin-left: 9px;
+        margin-top: 82px;
+        width: 78rem;
+    }
+
+    /* Destacados y Ofertas */
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-left: 11rem !important;
+    }
+
+    /* Destacados y Ofertas */
+    .page-section{
+        width: 1584px;
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-left: 16rem !important;
+    }
+
+    .swiperDestacados__anterior, .swiperDestacados__siguiente {
         position: absolute;
-        right: 270px;
-        top: 265px;
-        width: 100px;
-        height: 100px;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border: none;
+        top: calc(44% - 35px);
+        cursor: pointer;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 1.25rem;
+        background: #00000075;
+        color: rgb(0, 0, 0);
+    }
+
+    .swiperDestacados__siguiente {
+        right: -48px !important;
+        
+    }
+
+    .swiperOfertas__anterior {
+        left: -37px;
+    }
+
+    /* Especificos */
+    .margin {
+        margin-right: 278px;
+    }
+
+    .distanciado {
+        margin-left: -12px !important;
+        margin-top: 100px;
+        width: 78rem;
+    }
+
+    /* Encuentranos */
+    .texto-resposive{
+        margin-left: 11rem;
+    }
+
+    .container-responsive{
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-left: 11rem !important;
     }
     
-    .position-arrow2 {
-        position: absolute;
-        left: 280px;
-        bottom: 276px;
-        width: 100px;
-        height: 100px;
-    }
-
-    .row-especial {
-        display: flex;
-        padding-right: 111px;
-        padding-left: 44px;
-        justify-content: center;
-        text-align: center;
-    }
-
-}
-
-@media (min-width: 991px) and (max-width: 999px) {
-    .row-especial {
-        display: flex;
-        padding-right: 50px;
-        padding-left: 48px;
-        justify-content: center;
-        text-align: center;
+    /* Footer */
+    .row-footer{
+        width: 1589px;
     }
 }
 
-@media (min-width: 700px) and (max-width: 991px) {
-    .position {
-        position: absolute;
-        padding-left: 68rem;
-        display: flex;
-    }
 
-    .navbar-nav {
-        display: flex;
-        padding-left: 48rem;
-        margin-bottom: -31px;
-        list-style: none;
-    }
+/* Swiper Destacados */
 
-    .position-arrow {
-        position: absolute;
-        right: 283px;
-        top: 387px;
-        width: 100px;
-        height: 100px;
-    }
-
-    .position-arrow2 {
-        position: absolute;
-        left: 301px;
-        bottom: 478px;
-        width: 100px;
-        height: 100px;
-    }
-
-    .row-especial {
-        display: flex;
-        padding-right: 60px;
-        padding-left: 47px;
-        justify-content: center;
-        text-align: center;
-    }
+.swiperDestacados__contenedor{
+    position: relative;
 }
 
-@media (max-width: 767px) {
-.position-arrow {
+
+.spaceDestacados {
+    height: auto;
+    width: 295.5px;
+    padding-left: 1rem;
+}
+
+
+.swiperDestacados__anterior,
+.swiperDestacados__siguiente{
     position: absolute;
-    right: 200px;
-    top: 210px;
-    width: 100px;
-    height: 100px
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 1.25rem;
+    background: #00000075;
+    color: rgb(0, 0, 0);/*  */
 }
-.position-arrow2 {
+
+.swiperDestacados__anterior{
+    left: -30px;
+}
+
+.swiperDestacados__siguiente{
+    right: -15px;
+}
+
+/* Swiper Ofertas */
+
+.swiperOfertas__contenedor{
+    position: relative;
+}
+
+
+.spaceOfertas {
+    height: auto;
+    width: 295.5px;
+    padding-left: 1rem;
+}
+
+
+.swiperOfertas__anterior,
+.swiperOfertas__siguiente{
     position: absolute;
-    left: 250px;
-    bottom: 190px;
-    width: 100px;
-    height: 100px
-}
-.responsive-img {
-    width: 150px;
-    height: 150px;
-    align-items: center
-}
-.responsive-img-b {
-    width: 150px;
-    height: 150px;
-    padding-left: 10px;
-    align-items: center
-}
-.row-especial {
-    display: flex;
-    padding-right: 150px;
-    padding-left: 95px;
-    justify-content: center;
-    text-align: center
-}
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 1.25rem;
+    background: #00000075;
+    color: rgb(0, 0, 0);/*  */
 }
 
-@media (max-width: 575px) {
-.position-arrow {
-    visibility: hidden
-}
-.position-arrow2 {
-    visibility: hidden
-}
-.responsive-img {
-    width: 200px;
-    height: 200px;
-    padding-right: 0
-}
-.responsive-img-b {
-    width: 200px;
-    height: 200px;
-    padding-left: 0
-}
-.row-especial {
-    display: flex;
-    padding-right: 150px;
-    padding-left: 150px;
-    justify-content: center;
-    text-align: center
-}
+.swiperOfertas__anterior {
+    left: -25px;
 }
 
-@media (min-width: 300px) and (max-width: 469px) {
-.row-especial {
-    display: flex;
-    padding-right: 150px;
-    padding-left: 100px;
-    justify-content: center
-}
+.swiperOfertas__siguiente{
+    right: -30px;
 }

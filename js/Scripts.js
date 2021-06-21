@@ -1,52 +1,3 @@
-/* //carrito
-function añadirProducto() {
-    let producto = prompt("pelota | busoMasc. | moñoMasc.") 
-    let precio = prompt("ingrese el precio del producto")
-    const precioArray = [];
-    precioArray.push(precio)
-    return precioArray
-}
-
-function elegirProducto2() {
-    let producto2 = prompt("¿Algo mas? Si/No")
-    if (producto2 == "si") {
-        let elegirProducto2 = prompt("juguete | consola | traje") 
-        let precio2 = prompt("ingrese el precio del producto")
-        const precio2Array = [];
-        precio2Array.push(precio2)
-        return precio2Array
-    } else {
-        console.log("no selecciono ningun otro producto")
-        return producto2 = 0
-    }
-}
-
-
-function envio(productoAñadido, producto2Añadido) {
-    if (producto2 = true) {
-        let precioTotal = parseInt(productoAñadido) + parseInt(producto2Añadido) + 100
-        return precioTotal
-    } else {
-        let precioTotal = parseInt(productoAñadido) + 100
-        return precioTotal
-    }
-}
-
-function mostrarPrecioTotal(resultadoFinal) {
-    document.write("el precio total es " + resultadoFinal)
-}
-
-
-
-function guardarResultados(producto, productoSecundario, totalEnvio) {
-    this.producto = producto
-    this.productoSecundario = productoSecundario;
-    this.totalEnvio = totalEnvio;
-}
-const guardarResultados1 = new guardarResultados(añadirProducto, elegirProducto2, envio(añadirProducto(), elegirProducto2()))
-
-mostrarPrecioTotal(guardarResultados1.totalEnvio) */
-
 /* Eventos de cuotas */
 const eleccionA = document.querySelector(".doce");
 const eleccionB = document.querySelector(".dieciocho");
@@ -63,132 +14,139 @@ eleccionA.addEventListener("click", remarcarA)
 eleccionB.addEventListener("click", remarcarB)
 
 
-
 /* Agregar carrito */
-const datoProductos = [
+
+/* const datoProductos = [
     {
         nombre:"Despensero Micro Muro",
-        precio: 600
+        precio: 600,
+        imagen: './assets/Img/productos-destacados/1.jpg',
+        id: 1
     },
     {
         nombre:"BAHIUT Muro Vertical",
-        precio: 523
+        precio: 523,
+        imagen: './assets/Img/productos-destacados/2.jpg',
+        id: 2
         
     },
     {
         nombre:"Hindu Muro",
-        precio: 843
+        precio: 843,
+        imagen: './assets/Img/productos-destacados/3.jpg',
+        id: 3
         
     },
     {
         nombre:"Rrack Muro Vertical",
-        precio: 203
+        precio: 203,
+        imagen: './assets/Img/productos-destacados/4.jpg',
+        id: 4
         
     },
     {
         nombre:"Casita Muro",
-        precio: 698
+        precio: 698,
+        imagen: './assets/Img/productos-destacados/5.jpg',
+        id: 5
         
     },
     {
         nombre:"Hordenador de Tela Muro",
-        precio: 345
+        precio: 345,
+        imagen: './assets/Img/productos-destacados/6.jpg',
+        id: 6
         
     }
 ]
 
-function agregarCarrito () {
-    datoProductos.forEach(element => {
-        let contenedorNom = document.createElement("div")
-        contenedorNom.innerHTML = element.nombre
-        let contenedorPre = document.createElement("p")
-        contenedorPre.innerHTML = element.precio
-        document.querySelector("#agregarCarrito").appendChild(contenedorNom)
-        document.querySelector("#agregarCarrito").appendChild(contenedorPre)
+//Renderizar productos
+
+function renderizarProductos(){
+    let contenedorProductos = document.getElementById('productos');
+    datoProductos.forEach(producto => {
+        contenedorProductos.innerHTML += `
+        <div class="col-lg-4 col-sm-6 mb-4" id="${producto.id}">
+            <div class="portfolio-item">
+                <div class="responsive-img">
+                    <img class="responsive-img" src="${producto.imagen}" alt="" />
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">${producto.nombre}</div>
+                    </div>
+                </div>
+                <button class="btn btn-primary agregar-carrito" type="button">
+                    <i class="fas fa-smile-beam"></i>
+                    Agregar al carrito
+                </button>
+                
+            </div>
+        </div>
+        `
     });
+
+    $("#Cambio").prepend(`
+        <div class="position-arrow2-b circle responsive">
+            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+            </svg>
+        </div>
+        `
+    )
+    $("#Cambio").prepend(`
+        <div class="position-arrow-a circle">
+            <svg class="hidden" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24">
+                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+            </svg>
+        </div>
+        `
+    )
+
+    let agregarCarritoBotones = document.getElementsByClassName('agregar-carrito');
+
+    for (let boton of agregarCarritoBotones){
+        boton.addEventListener('click', agregarCarrito);
+    }
 }
 
-agregarCarrito()
+renderizarProductos();
+
+let carrito =[];
+
+function agregarCarrito(evt) {
+    console.log(evt.target.parentNode.parentNode.id);
+    datoProductos.forEach(producto => {
+        if(evt.target.parentNode.parentNode.id == producto.id){
+            carrito.push(producto);
+        }
+    });
+    localStorage.setItem('productos-carrito', JSON.stringify(carrito));
+} */
  
+window.addEventListener('load', function() {
+    new Glider(document.querySelector('.swiperDestacados__lista'), {
+        slidesToShow: 4,
+        slidesToScroll: 4,
 
-const apretarBotonA = document.querySelector(".carrito1");
+        dots: '.swiperDestacados__indicador',
 
-const agregado = []
-
-const apretaste1 = () => {
-    agregado.push(agregarCarrito)
-    const JSON = JSON.stringify (agregado)
-    localStorage.setItem("agregado", JSON);
-
-}
-
-apretarBotonA.addEventListener("click", apretaste1) 
-/* 
-
-const apretarBotonB = document.querySelector(".carrito2");
-
-const agregarCarrito1 = {
-    producto: "Despensero Micro Muro",
-    precio: 500   
-};
-
-const agregarCarrito2 = {
-    producto: "BAHIUT Muro Vertical",
-    precio: 700
-}
-const apretaste2 = () => {
-    const pasarJson = JSON.stringify(agregarCarrito2);
-    localStorage.setItem("agregarCarrito2", pasarJson);
-    let storage = localStorage.getItem ("agregarCarrito2") 
-    console.log("productos guardados= " + storage)
-}
-
-let total = agregarCarrito1.precio + agregarCarrito2.precio
-
-let totalCarrito = document.createElement("p")
-totalCarrito.innerHTML = `el precio total es= ${total}`;
-document.body.appendChild(totalCarrito)
-//no se como hacer para que aparezca abajo de los botones de destacados :( 
-
-apretarBotonB.addEventListener("click", apretaste2) */
-
-
-
-const agregado = []
-
-
-function objetos (nombre, precio, imagen) {
-    this.nombre = nombre;
-    this.precio = precio;
-}
-const objetos1 = new objetos("Despensero Micro Muro", 643);
-const objetos2 = new objetos("BAHIUT Muro Vertical", 523);
-const objetos3 = new objetos("Hindu Muro", 843);
-const objetos4 = new objetos("Rrack Muro Vertical", 203);
-const objetos5 = new objetos("Casita Muro", 698);
-const objetos6 = new objetos("Hordenador de Tela Muro", 345);
-
-
-agregado.push(objetos2) 
-agregado.push(objetos3) 
-agregado.push(objetos4) 
-agregado.push(objetos5) 
-agregado.push(objetos6)  
-
-const apretarBotonA = document.querySelector(".carrito1");
-
-const apretaste1 = () => {
-    agregado.push(objetos1)
-    const json = JSON.stringify (agregado)
-    localStorage.setItem("agregado", json);
-    agregado.forEach(agre =>{
-        let contenedorNom = document.createElement("div")
-        contenedorNom.innerHTML = agre.nombre
-        let contenedorPre = document.createElement("p")
-        contenedorPre.innerHTML = agre.precio
-        document.querySelector("#agregarCarrito").appendChild(contenedorNom)
-        document.querySelector("#agregarCarrito").appendChild(contenedorPre)
+        arrows: {
+            prev: '.swiperDestacados__anterior',
+            next: '.swiperDestacados__siguiente'
+        }
     })
-}
+})
 
-apretarBotonA.addEventListener("click", apretaste1)
+window.addEventListener('load', function() {
+    new Glider(document.querySelector('.swiperOfertas__lista'), {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+
+        dots: '.swiperOfertas__indicador',
+
+        arrows: {
+            prev: '.swiperOfertas__anterior',
+            next: '.swiperOfertas__siguiente'
+        }
+    })
+})

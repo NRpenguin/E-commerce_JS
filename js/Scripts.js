@@ -16,7 +16,7 @@ eleccionB.addEventListener("click", remarcarB)
 
 /* Agregar carrito */
 
-/* const datoProductos = [
+const datoProductos = [
     {
         nombre:"Despensero Micro Muro",
         precio: 600,
@@ -28,79 +28,63 @@ eleccionB.addEventListener("click", remarcarB)
         precio: 523,
         imagen: './assets/Img/productos-destacados/2.jpg',
         id: 2
-        
     },
     {
         nombre:"Hindu Muro",
         precio: 843,
         imagen: './assets/Img/productos-destacados/3.jpg',
         id: 3
-        
     },
     {
         nombre:"Rrack Muro Vertical",
         precio: 203,
         imagen: './assets/Img/productos-destacados/4.jpg',
-        id: 4
-        
+        id: 4  
     },
     {
         nombre:"Casita Muro",
         precio: 698,
         imagen: './assets/Img/productos-destacados/5.jpg',
-        id: 5
-        
+        id: 5   
     },
     {
         nombre:"Hordenador de Tela Muro",
         precio: 345,
         imagen: './assets/Img/productos-destacados/6.jpg',
         id: 6
-        
+    },
+     {
+        nombre:"7",
+        precio:124,
+        imagen: './assets/Img/productos-destacados/6.jpg',
+        id: 7
+    },
+    {
+        nombre:8,
+        precio:754,
+        imagen: './assets/Img/productos-destacados/6.jpg',
+        id: 8
     }
 ]
-
-//Renderizar productos
 
 function renderizarProductos(){
     let contenedorProductos = document.getElementById('productos');
     datoProductos.forEach(producto => {
         contenedorProductos.innerHTML += `
-        <div class="col-lg-4 col-sm-6 mb-4" id="${producto.id}">
-            <div class="portfolio-item">
-                <div class="responsive-img">
-                    <img class="responsive-img" src="${producto.imagen}" alt="" />
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">${producto.nombre}</div>
-                    </div>
+        <div id="${producto.id}"> 
+            <div>
+                <div class="swiperDestacados__elemento spaceDestacados">
+                    <img src="${producto.imagen}" alt=""/>
+                    <p>${producto.nombre}</p>
                 </div>
                 <button class="btn btn-primary agregar-carrito" type="button">
-                    <i class="fas fa-smile-beam"></i>
-                    Agregar al carrito
+                <i class="fas fa-smile-beam"></i>
+                Agregar al carrito
                 </button>
-                
             </div>
         </div>
         `
     });
-
-    $("#Cambio").prepend(`
-        <div class="position-arrow2-b circle responsive">
-            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-            </svg>
-        </div>
-        `
-    )
-    $("#Cambio").prepend(`
-        <div class="position-arrow-a circle">
-            <svg class="hidden" focusable="false" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24">
-                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
-            </svg>
-        </div>
-        `
-    )
 
     let agregarCarritoBotones = document.getElementsByClassName('agregar-carrito');
 
@@ -121,8 +105,9 @@ function agregarCarrito(evt) {
         }
     });
     localStorage.setItem('productos-carrito', JSON.stringify(carrito));
-} */
- 
+}
+
+/* Carousel Productos */
 window.addEventListener('load', function() {
     new Glider(document.querySelector('.swiperDestacados__lista'), {
         slidesToShow: 4,
@@ -150,3 +135,27 @@ window.addEventListener('load', function() {
         }
     })
 })
+
+/* Animacion y efectos */
+$(document).ready(function(){
+    $('.zoom').hover(function() {
+        $(this).addClass('transition');
+    },
+     function() {
+        $(this).removeClass('transition');
+    });
+});
+
+/* 
+let carrito = {}
+
+const addCarrito = e => {
+    if (e.targe.classList.contains('btn-primary')){
+        console.log(e.target.parentElement)
+    }
+    e.stopPropagation()
+}
+
+const setCarrito = objeto => {
+
+} */

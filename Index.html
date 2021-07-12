@@ -19,6 +19,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Indie+Flower&display=swap"
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
         
         <!-- Slider -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css">
@@ -33,13 +36,15 @@
         <!-- Jquery -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+        <!-- Scroll -->
+
 
     </head>
 
     <body id="page-top">
         <!-- Navegacion -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <a class="navbar-brand" href="#page-top">
+            <a class="navbar-brand nav-link" href="#page-top">
                 <img class="navbar-logo position-logo" src="./assets/Img/LOGO REWE.jpg" alt="" height="400px" width="200px">
             </a>
             <div class="centrar-links">
@@ -113,7 +118,10 @@
                             <i class="fas fa-chevron-left"></i>
                         </button>
                         <div id="productos" class="swiperDestacados__lista">
-                            
+                            <!-- <button class="btn btn-primary agregar-carrito" type="button">
+                                <i class="fas fa-smile-beam"></i>
+                                Agregar al carrito
+                            </button> -->
                         </div>
                         <!-- Control next -->
                         <button aria-label="siguiente" class="swiperDestacados__siguiente">
@@ -196,10 +204,9 @@
 
         <!-- Mas especifico -->
         <section class="page-section" id="Mas-Especifico">
-            <div class="container">
-                <div class="center-buttons">
-                    <button type="button" class="btn btn-outline-danger margin doce">Ahora 12</button>
-                    <button type="button" class="btn btn-outline-warning dieciocho">Ahora 18</button>
+            <div class="container-Img">
+                <div class="center-img">
+                    <img src="./assets/Img/mas-especificos/4.jpg" alt="" height="230px" width="750px">
                 </div>
             </div>
             <div class="distanciado">
@@ -260,6 +267,43 @@
         <a class="scroll-to-top rounded" href="#page-top" style="opacity: 1; display: block;">
             <i class="size fab fa-whatsapp"></i>
         </a>
+
+        <!-- Destacados Modal -->
+        <div id="productos-modal">
+            <div class="portfolio-modal modal fade" id="${prod.id}" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="close-modal" data-dismiss="modal"><img src="./assets/Img/close-icon.lnk" alt="Close modal" /></div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="modal-body">
+                                        <!-- Project Details Go Here-->
+                                        <h2 class="text-uppercase">${prod.nombre}</h2>
+                                        <p class="item-intro text-muted">$${prod.precio}</p>
+                                        <img class="img-fluid d-block mx-auto" src="#" alt="" width="668px" height="468px" />
+                                        <div class="position-modal-B">
+                                            <p>${prod.informacionGeneral}</p>
+                                            <ul class="list-inline">
+                                                <li>${prod.dato1}</li>
+                                                <li>${prod.dato2}</li>
+                                            </ul>
+                                            <a href="Compra.html">
+                                                <button class="btn btn-primary" type="button">
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                    Comprar
+                                                </button>
+                                            </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
         
         <!-- Scripts Slider -->
         <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>

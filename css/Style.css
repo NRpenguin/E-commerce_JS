@@ -3,6 +3,7 @@
 #mainNav {
     padding-top: 16px;
     padding-bottom: 5px;
+    height: 125px;
     border: none;
     background-color: rgb(255, 0, 0);  
 }
@@ -43,6 +44,10 @@ nav{
 
 .navbar-dark .navbar-nav .nav-link {
     color: rgb(255 255 255);
+}
+
+.nav-link:hover {
+    color: rgb(255 255 255) !important;
 }
 
 .position {
@@ -107,17 +112,40 @@ nav{
     color: #000000 !important;
 }
 
+/* Destacados */
+
+.producto_contentenido {
+    margin-right: 47px;
+}
+
+.producto_link{
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Varela Round', sans-serif;
+}
+.producto_link:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.centrar{
+    padding-left: 4rem;
+    font-size: 24px;
+}
+
 /* Swiper Destacados */
 
 .swiperDestacados__contenedor{
     position: relative;
 }
 
-
 .spaceDestacados {
     height: auto;
-    width: 295.5px;
+    width: 265.5px;
+    padding-top: 10px;
     padding-left: 1rem;
+    background-color: rgb(138, 138, 138);
+    border-radius: 0.25rem;
 }
 
 
@@ -138,11 +166,11 @@ nav{
 }
 
 .swiperDestacados__anterior{
-    left: -30px;
+    left: -34px;
 }
 
-.swiperDestacados__siguiente{
-    right: -15px;
+.swiperDestacados__siguiente {
+    right: -22px;
 }
 
 .glider-dots {
@@ -320,7 +348,7 @@ svg:not(:root).svg-inline--fa {
 }
 
 .size{
-    height: 1rem;
+    height: 2.4rem;
 }
 
 svg {
@@ -372,9 +400,9 @@ element.style {
     }
 
     /* Especificos */
-    .center-buttons {
+    .center-img {
         position: absolute;
-        padding-left: 181px;
+        padding-left: 100px;
     }
 
     .distanciado {

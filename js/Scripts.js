@@ -13,14 +13,14 @@ function renderizarProductos(){
                     <div class="producto_contentenido">
                         <a href="#" class="producto_link centrar"><span>$${producto.precio}</span></a>
                         <a href="#" class="producto_link"><p>${producto.nombre}</p></a>
+                        <button class="btn btn-primary agregar-carrito" type="button">
+                        <i class="fas fa-smile-beam"></i>
+                        Agregar al carrito
                     </div>
-                    <button class="btn btn-primary agregar-carrito" type="button">
-                    <i class="fas fa-smile-beam"></i>
-                    Agregar al carrito
                 </button>
                 </div>
             </div>
-            `
+            ` 
         });
         
         let agregarCarritoBotones = document.getElementsByClassName('agregar-carrito');
@@ -31,13 +31,8 @@ function renderizarProductos(){
     })
 
 }
-
 renderizarProductos();
 
-$('.mostrar_modal').click(function(e){
-    e.preventDefault();
-    let producto = $(this).attr()
-})
 
 let carrito =[];
 
@@ -51,22 +46,40 @@ function agregarCarrito(evt) {
                 carrito.push(producto);
             }
         })
-     /* datoProductos.forEach(producto => {
-        if(evt.target.parentNode.parentNode.id == producto.id){
-            carrito.push(producto);
-        } */
     });
     localStorage.setItem('productos-carrito', JSON.stringify(carrito));
 }
+
+function recibirProductoCarrito(){
+    const accederInfo = localStorage.getItem ('productos-carrito')
+    const pasar = JSON.parse (accederInfo)
+    let pintar = document.getElementById('Agregar');
+    pasar.forEach(prod => {
+        pintar.innerHTML += `
+        <div id="${prod.id}">
+            <div class="swiperDestacados__elemento spaceDestacadosCarrito">
+                <a href="#" class="alinear-imagen mostrar_modal">
+                    <img src="${prod.imagen}" alt=""/>
+                </a>
+                <div class="producto_contentenido">
+                    <a href="#" class="producto_link centrar"><span>$${prod.precio}</span></a>
+                    <a href="#" class="producto_link"><p>${prod.nombre}</p></a>
+                </div>
+            </div>
+        </div>
+        `
+    })
+}
+recibirProductoCarrito()
 
 /* Carousel Productos */
 window.addEventListener('load', function() {
     new Glider(document.querySelector('.swiperDestacados__lista'), {
         slidesToShow: 4,
         slidesToScroll: 4,
-
+        
         dots: '.swiperDestacados__indicador',
-
+        
         arrows: {
             prev: '.swiperDestacados__anterior',
             next: '.swiperDestacados__siguiente'

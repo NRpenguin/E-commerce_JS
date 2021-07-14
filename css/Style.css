@@ -429,10 +429,9 @@ element.style {
     }
 
     /* Especificos */
-    .center-img {
-        display: flex;
-        justify-content: center;
+    .alinear_img {
         position: absolute;
+        margin-left: 1rem ;
     }
 
     .distanciado {

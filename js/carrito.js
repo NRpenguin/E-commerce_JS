@@ -152,6 +152,6 @@ function Total(){
         const obtenerPrecio = Number(
             obtenerPrecioElemento.textContent.replace('$', '')
             )
-        ProductosCarrito
+        ProductosCarrito.querySelector
     })
 }

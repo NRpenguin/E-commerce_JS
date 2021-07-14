@@ -3,48 +3,56 @@
        "nombre":"Despensero Micro Muro",
         "precio": 600 ,
         "imagen": "./assets/Img/productos-destacados/1.jpg",
+        "idEliminar":"1",
         "id": "1"
     },
     {
         "nombre":"BAHIUT Muro Vertical",
         "precio": 523,
         "imagen": "./assets/Img/productos-destacados/2.jpg",
+        "idEliminar":"2",
         "id": "2"
     },
     {
         "nombre":"Hindu Muro",
         "precio": 843,
        "imagen": "./assets/Img/productos-destacados/3.jpg",
-        "id": "3"
+       "idEliminar":"3", 
+       "id": "3"
     },
     {
         "nombre":"Rrack Muro Vertical",
         "precio": 203,
         "imagen": "./assets/Img/productos-destacados/4.jpg",
+        "idEliminar":"4",
         "id": "4"  
     },
     {
         "nombre":"Casita Muro",
         "precio": 698,
         "imagen": "./assets/Img/productos-destacados/5.jpg",
+        "idEliminar":"5",
         "id": "5"   
     },
     {
         "nombre":"Hordenador de Tela Muro",
         "precio": 345,
         "imagen": "./assets/Img/productos-destacados/6.jpg",
+        "idEliminar":"6",
         "id": "6"
     },
     {
         "nombre":"7",
         "precio":124,
         "imagen": "./assets/Img/productos-destacados/7.jpg",
+        "idEliminar":"7",
         "id": "7"
     },
     {
         "nombre":"8",
         "precio":754,
         "imagen": "./assets/Img/productos-destacados/6.jpg",
+        "idEliminar":"8",
         "id": "8"
     }
 ]

@@ -298,7 +298,7 @@ figure {
     overflow: hidden;
 }
 
- img.zoom {
+img.zoom {
     width: 501px;
     height: 368px;
     -webkit-transition: all .3s ease-in-out;

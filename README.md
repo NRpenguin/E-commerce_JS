@@ -17,15 +17,17 @@ Debido a esto, **no puede ejecutarse correctamente abriendo el archivo HTML dire
 Cómo ejecutar el proyecto?
 
 1. Clonar el repositorio:
+   
    git clone https://github.com/NRpenguin/E-commerce_JS.git
    
 2. Ingresar a la carpeta del proyecto:
+   
    cd E-commerce_JS
 
 3. Iniciar el servidor local:
    npx live-server --port=8000
 
-4.Abrir el navegador en la URL indicada por el servidor.
+4. Abrir el navegador en la URL indicada por el servidor.
 
 
 ##  🚀 Tecnologías utilizadas

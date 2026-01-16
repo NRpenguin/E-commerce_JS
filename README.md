@@ -25,6 +25,7 @@ Cómo ejecutar el proyecto?
    cd E-commerce_JS
 
 3. Iniciar el servidor local:
+   
    npx live-server --port=8000
 
 4. Abrir el navegador en la URL indicada por el servidor.
